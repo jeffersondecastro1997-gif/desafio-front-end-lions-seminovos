@@ -1,43 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lions Seminovos</title>
-    <link rel="stylesheet" href="style.css"> <!-- Referência ao arquivo CSS -->
+    <title>Lions Seminovos - Seu próximo carro está aqui</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho da página -->
+
     <header>
-        <h1>Bem-vindo à Lions Seminovos</h1>
-        <p>Encontre o seminovo dos seus sonhos</p>
+        <div class="logo">Lions Seminovos</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Página Inicial</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="agende-visita.html">Agende uma Visita</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Botões de navegação para as páginas -->
-    <nav>
-        <a href="catalogo.html"><button>Catálogo</button></a>
-        <a href="agende-visita.html"><button>Agende uma Visita</button></a>
-    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O carro dos seus sonhos está na Lions.</h1>
+            <p>Mais de 2.000 veículos em estoque com as melhores taxas do Rio de Janeiro.</p>
+            <div class="hero-btns">
+                <a href="catalogo.html" class="btn">Ver Estoque Completo</a>
+                <a href="https://lionsseminovos.com.br" target="_blank" class="btn btn-outline">Site Oficial</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Seção principal da página -->
-    <main>
-        <section id="promo">
-            <h2>Promoção de Carros</h2>
-            <p>Confira as ofertas especiais da nossa loja.</p>
-        </section>
-        
-        <!-- Botão para link externo (site da empresa) -->
-        <a href="https://www.lionsseminovos.com.br" target="_blank">
-            <button>Visite o Site Oficial</button>
-        </a>
+    <main class="container">
+        <div class="section-header">
+            <h2>Destaques da Semana</h2>
+            <p>Confira as ofertas exclusivas que separamos para você.</p>
+        </div>
+
+        <div class="grid-carros">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&q=80&w=500" alt="Toyota Corolla">
+                <div class="card-content">
+                    <h3>Toyota Corolla XEI</h3>
+                    <p class="car-info">2022 • 32.000 km</p>
+                    <p class="price">R$ 129.900</p>
+                    <a href="agende-visita.html" class="btn btn-full">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=500" alt="Jeep Renegade">
+                <div class="card-content">
+                    <h3>Jeep Renegade Longitude</h3>
+                    <p class="car-info">2021 • 45.000 km</p>
+                    <p class="price">R$ 98.500</p>
+                    <a href="agende-visita.html" class="btn btn-full">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=500" alt="VW Polo">
+                <div class="card-content">
+                    <h3>Volkswagen Polo TSI</h3>
+                    <p class="car-info">2023 • 12.000 km</p>
+                    <p class="price">R$ 89.900</p>
+                    <a href="agende-visita.html" class="btn btn-full">Tenho Interesse</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Lions Seminovos</p>
+        <div class="footer-content">
+            <p><strong>Lions Seminovos</strong> - Av. Brasil, 20384 - Coelho Neto, Rio de Janeiro - RJ</p>
+            <p>&copy; 2026 | Desafio Front-end</p>
+        </div>
     </footer>
 
-    <!-- Script JS -->
     <script src="script.js"></script>
 </body>
 </html>
+
 

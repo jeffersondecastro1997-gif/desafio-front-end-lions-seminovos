@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Agende uma Visita</h1>
-    <form>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+    <header>
+        <div class="logo">Lions Seminovos</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="agende-visita.html" class="active">Agende uma Visita</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="date">Data da visita:</label>
-        <input type="date" id="date" name="date" required>
+    <main class="container">
+        <div class="form-container">
+            <h2>Agende sua Visita</h2>
+            <p>Preencha os dados e um consultor entrará em contato.</p>
+            
+            <form action="#">
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input type="text" placeholder="Seu nome" required>
+                </div>
 
-        <button type="submit">Agendar Visita</button>
-    </form>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Data da Visita</label>
+                    <input type="date" required>
+                </div>
+
+                <button type="submit" class="btn btn-full">Confirmar Agendamento</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Lions Seminovos</strong> - Av. Brasil, 20384 - Rio de Janeiro - RJ</p>
+        <p>&copy; 2026 | Desafio Front-end</p>
+    </footer>
+
 </body>
 </html>

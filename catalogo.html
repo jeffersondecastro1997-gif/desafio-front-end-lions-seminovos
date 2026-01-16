@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Catálogo de Seminovos</h1>
-    <ul>
-        <li>Carro 1</li>
-        <li>Carro 2</li>
-        <li>Carro 3</li>
-    </ul>
+
+    <header>
+        <div class="logo">Lions Seminovos</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="agende-visita.html">Agende uma Visita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <h1>Nosso Estoque</h1>
+            <p>Encontre o veículo ideal para sua rotina.</p>
+        </div>
+
+        <div class="grid-carros">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&q=80&w=500" alt="Toyota Corolla">
+                <div class="card-content">
+                    <h3>Toyota Corolla XEI</h3>
+                    <p class="car-info">2022 • 32.000 km</p>
+                    <p class="price">R$ 129.900</p>
+                    <a href="agende-visita.html" class="btn btn-full">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=500" alt="Jeep Renegade">
+                <div class="card-content">
+                    <h3>Jeep Renegade Longitude</h3>
+                    <p class="car-info">2021 • 45.000 km</p>
+                    <p class="price">R$ 98.500</p>
+                    <a href="agende-visita.html" class="btn btn-full">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=500" alt="VW Polo">
+                <div class="card-content">
+                    <h3>Volkswagen Polo TSI</h3>
+                    <p class="car-info">2023 • 12.000 km</p>
+                    <p class="price">R$ 89.900</p>
+                    <a href="agende-visita.html" class="btn btn-full">Tenho Interesse</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>Lions Seminovos</strong> - Av. Brasil, 20384 - Rio de Janeiro - RJ</p>
+        <p>&copy; 2026 | Desafio Front-end</p>
+    </footer>
+
 </body>
 </html>

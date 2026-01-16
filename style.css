@@ -1,77 +1,229 @@
-/* Resetando margens e preenchimentos */
+/* ==========================================================================
+   VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+:root {
+    --primary: #ff4500;       /* Laranja Lions */
+    --primary-hover: #e63e00;
+    --dark: #1a1a1a;          /* Grafite Escuro */
+    --light: #f9f9f9;         /* Fundo Claro */
+    --white: #ffffff;
+    --gray: #666;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --transition: 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
     line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no fundo */
 }
 
+/* ==========================================================================
+   HEADER E NAVEGAÇÃO
+   ========================================================================== */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background: var(--white);
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-h1 {
-    font-size: 2em;
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
-nav {
-    text-align: center;
-    margin-top: 20px;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
 nav a {
     text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 5px;
+nav a:hover, nav a.active {
+    color: var(--primary);
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-/* Seção de Promoções */
-#promo {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-footer {
+/* ==========================================================================
+   BANNER HERO (PÁGINA INICIAL)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 120px 8%;
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    button {
-        width: 100%;
-        margin: 10px 0;
-    }
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
 }
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   CONTAINER E GRID DE CARROS (CATÁLOGO)
+   ========================================================================== */
+.container {
+    padding: 60px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex: 1; /* Faz o container crescer para empurrar o footer */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h1, .section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.grid-carros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.car-info {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   FORMULÁRIO (AGENDE UMA VISITA)
+   ========================================================================== */
+.form-container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container p {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.1);
+}
+
+/* ==========================================================================
+   BOTÕES REUTILIZÁVEIS
+   ========================================================================== */
+.btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block
+    
+
+
 
