@@ -1,16 +1,20 @@
-# desafio-front-end-lions-seminovos
-Projeto desenvolvido como parte do desafio técnico para a vaga de desenvolvedor front-end na Lions Seminovos. Este repositório contém uma aplicação front-end inspirada no site da empresa, com foco nas páginas 'Página Inicial', 'Catálogo' e 'Agende uma Visita'."
-# Desafio Front-End Lions Seminovos
+# 🦁 Desafio Front-end - Lions Seminovos
 
-Este repositório contém o código de uma aplicação front-end criada como parte do desafio técnico para a vaga de desenvolvedor front-end da Lions Seminovos.
+Projeto desenvolvido para o processo seletivo da Lions Seminovos, focado em criar uma interface moderna, responsiva e intuitiva para os usuários.
 
-## Tecnologias utilizadas
-- HTML5
-- CSS3
-- JavaScript
+## 🛠️ Tecnologias e Decisões Técnicas
+- **HTML5 & CSS3 Semântico**: Estruturação limpa para melhor SEO e acessibilidade.
+- **CSS Grid & Flexbox**: Utilizados para criar um layout totalmente responsivo que se adapta de smartphones a desktops.
+- **UX (User Experience)**: 
+    - Banner de impacto na Home para conversão imediata.
+    - Cards de veículos com efeitos de hover para maior interatividade.
+    - Formulário de agendamento centralizado e limpo, focando na facilidade de preenchimento.
+- **Mobile First**: Design pensado primeiramente na fluidez em dispositivos móveis.
 
-## Como rodar o projeto
+## 🚀 Como rodar o projeto
+1. Clone este repositório.
+2. Abra o arquivo `index.html` em qualquer navegador moderno.
+3. Não é necessária a instalação de dependências externas (Vanilla Web Stack).
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/jeffersondecastro1997-gif/desafio-front-end-lions-seminovos.git
+---
+*Desenvolvido com foco em performance e qualidade de código.*
